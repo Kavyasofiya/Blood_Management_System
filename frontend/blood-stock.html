@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Stock Management</title>
+
+    <link rel="stylesheet" href="css/blood-stock.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <h2>
+            <i class="fa-solid fa-droplet"></i>
+            Blood Bank
+        </h2>
+
+        <ul>
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="donors.html">
+                    <i class="fa-solid fa-users"></i>
+                    Donors
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="blood-stock.html">
+                    <i class="fa-solid fa-heart-circle-plus"></i>
+                    Blood Stock
+                </a>
+            </li>
+
+            <li>
+                <a href="requests.html">
+                    <i class="fa-solid fa-file-medical"></i>
+                    Requests
+                </a>
+            </li>
+
+            <li>
+                <a href="hospitals.html">
+                    <i class="fa-solid fa-hospital"></i>
+                    Hospitals
+                </a>
+            </li>
+
+            <li>
+    <a href="#" id="logoutBtn">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Logout
+    </a>
+</li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <h1>Blood Stock Management</h1>
+
+        <div class="form-box">
+
+            <input type="hidden" id="stockId">
+
+            <select id="blood_group">
+                <option value="">Select Blood Group</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+                <option>O+</option>
+                <option>O-</option>
+            </select>
+
+            <input
+                type="number"
+                id="units"
+                placeholder="Available Units"
+            >
+
+            <input
+                type="date"
+                id="expiry_date"
+            >
+
+            <button id="saveBtn">
+                Save Blood Stock
+            </button>
+
+        </div>
+
+        <br>
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search Blood Group..."
+        >
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Blood Group</th>
+                    <th>Units</th>
+                    <th>Expiry Date</th>
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="stockTable">
+
+            </tbody>
+
+        </table>
+
+    </main>
+
+</div>
+
+<script src="js/blood-stock.js"></script>
+
+</body>
+
+</html>

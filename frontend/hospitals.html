@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hospital Management</title>
+
+    <link rel="stylesheet" href="css/hospital.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h2>
+            <i class="fa-solid fa-droplet"></i>
+            Blood Bank
+        </h2>
+
+        <ul>
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="donors.html">
+                    <i class="fa-solid fa-users"></i>
+                    Donors
+                </a>
+            </li>
+
+            <li>
+                <a href="blood-stock.html">
+                    <i class="fa-solid fa-heart-circle-plus"></i>
+                    Blood Stock
+                </a>
+            </li>
+
+            <li>
+                <a href="requests.html">
+                    <i class="fa-solid fa-file-medical"></i>
+                    Blood Requests
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="hospitals.html">
+                    <i class="fa-solid fa-hospital"></i>
+                    Hospitals
+                </a>
+            </li>
+
+            <li>
+    <a href="#" id="logoutBtn">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Logout
+    </a>
+</li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main">
+
+        <h1>Hospital Management</h1>
+
+        <div class="form-box">
+
+            <input type="hidden" id="hospitalId">
+
+            <input
+                type="text"
+                id="hospital_name"
+                placeholder="Hospital Name"
+            >
+
+            <input
+                type="text"
+                id="address"
+                placeholder="Address"
+            >
+
+            <input
+                type="text"
+                id="phone"
+                placeholder="Phone Number"
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email"
+            >
+
+            <input
+                type="text"
+                id="contact_person"
+                placeholder="Contact Person"
+            >
+
+            <button id="saveBtn">
+                Save Hospital
+            </button>
+
+        </div>
+
+        <br>
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search Hospital..."
+        >
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Hospital</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Contact Person</th>
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="hospitalTable">
+
+            </tbody>
+
+        </table>
+
+    </main>
+
+</div>
+
+<script src="js/auth.js"></script>
+<script src="js/hospital.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Donor Management</title>
+
+    <link rel="stylesheet" href="css/donor.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h2>
+            <i class="fa-solid fa-droplet"></i>
+            Blood Bank
+        </h2>
+
+        <ul>
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="donors.html">
+                    <i class="fa-solid fa-users"></i>
+                    Donors
+                </a>
+            </li>
+
+            <li>
+                <a href="blood-stock.html">
+                    <i class="fa-solid fa-heart-circle-plus"></i>
+                    Blood Stock
+                </a>
+            </li>
+
+            <li>
+                <a href="requests.html">
+                    <i class="fa-solid fa-file-medical"></i>
+                    Requests
+                </a>
+            </li>
+
+            <li>
+                <a href="hospitals.html">
+                    <i class="fa-solid fa-hospital"></i>
+                    Hospitals
+                </a>
+            </li>
+
+            <li>
+                <a href="#" id="logoutBtn">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main">
+
+        <h1>Donor Management</h1>
+
+        <div class="form-box">
+
+            <input type="hidden" id="donorId">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Donor Name"
+            >
+
+            <input
+                type="number"
+                id="age"
+                placeholder="Age"
+            >
+
+            <select id="gender">
+                <option value="">Select Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+
+            <select id="blood_group">
+                <option value="">Blood Group</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+                <option>O+</option>
+                <option>O-</option>
+            </select>
+
+            <input
+                type="text"
+                id="phone"
+                placeholder="Phone Number"
+            >
+
+            <input
+                type="text"
+                id="address"
+                placeholder="Address"
+            >
+
+            <input
+                type="date"
+                id="last_donation"
+            >
+
+            <button id="saveBtn">
+                Save Donor
+            </button>
+
+        </div>
+
+        <br>
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search Donor..."
+        >
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Blood Group</th>
+                    <th>Phone</th>
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="donorTable">
+
+            </tbody>
+
+        </table>
+
+    </main>
+
+</div>
+
+<!-- Correct JS Files -->
+
+<script src="js/auth.js"></script>
+
+<script src="js/donors.js"></script>
+
+</body>
+
+</html>
